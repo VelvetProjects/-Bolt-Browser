@@ -1,0 +1,29 @@
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+  h1 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 30px;
+}
+div.a {
+  text-align: center;
+}
+</style>
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>
+
+
+<div class="a">
+<h1>404</h1>
+<h3>We couldnt find the page you've been looking for, try again later</h3>
+</div>
